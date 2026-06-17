@@ -1,0 +1,28 @@
+# Connexions aux bases de données
+pymongo==4.6.1
+elasticsearch==8.11.0
+
+# Traitement des données
+pandas==2.1.4
+numpy==1.26.2
+
+# Requêtes HTTP
+requests==2.31.0
+
+# Gestion des dates
+python-dateutil==2.8.2
+
+# Logs et monitoring
+python-json-logger==2.0.7
+
+# Validation des données
+pydantic==2.5.3
+
+# Traitement de texte
+unidecode==1.3.7
+
+# Barre de progression
+tqdm==4.66.1
+
+# Embeddings
+sentence-transformers==2.7.0

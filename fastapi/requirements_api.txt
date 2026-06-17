@@ -1,0 +1,13 @@
+# FastAPI et serveur
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+pydantic==2.10.5
+ 
+# Elasticsearch
+elasticsearch==8.17.0
+ 
+# Embeddings et ML
+# torch is installed from the official PyTorch index in the Dockerfile (CPU wheel)
+sentence-transformers==2.7.0
+numpy==1.26.4
+

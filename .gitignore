@@ -1,0 +1,61 @@
+# Environment
+mon_venv/
+.venv/
+env/
+sample_training/
+
+# Byte-compiled / optimized / DLL files
+=======
+.venv/
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Data
+data/raw/*
+
+# Autoriser les exports processed (pour vérification)
+data/processed/*
+!data/processed/.gitkeep
+!data/processed/*.json
+
+# Models
+models/*
+!models/.gitkeep
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Reports
+reports/*.pdf
+reports/figures/*
+!reports/figures/.gitkeep
+
+# Logs
+*.log
+logs/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
