@@ -16,7 +16,17 @@
 
 ## 🎬 Démo
 
-> 🚧 Déploiement en cours — captures d'écran à venir.
+### Statistiques des offres
+
+![Statistiques des offres](images/stats_offres.png)
+
+### Moteur de recherche sémantique
+
+![Moteur de recherche](images/moteur_recherche.png)
+
+### Exemple de résultats
+
+![Résultats de recherche](images/resultats_recherche.png)
 
 ---
 
