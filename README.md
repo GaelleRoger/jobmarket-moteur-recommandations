@@ -10,7 +10,7 @@
 
 **Problème résolu :** Comprendre les dynamiques du marché de l'emploi en France nécessite d'agréger des données hétérogènes (offres, tensions sectorielles, démographie) dispersées entre plusieurs APIs publiques et privées.
 
-**Solution apportée :** Un pipeline ELT automatisé qui collecte, transforme et centralise les données de 5 sources (France Travail, Adzuna, JSearch, INSEE, Data.gouv), exposées via une API FastAPI et une interface Streamlit avec **matching sémantique de profils** par similarité cosinus.
+**Solution apportée :** Un pipeline ELT automatisé qui collecte, transforme et centralise les données de 5 sources (France Travail, Adzuna, JSearch, INSEE, Data.gouv), exposées via une API FastAPI et une interface Streamlit avec **recherche sémantoqie d'offres d'emplois** par similarité cosinus.
 
 ---
 
@@ -26,8 +26,8 @@
 
 ```bash
 # 1. Cloner le repository
-git clone https://github.com/DataScientest-Studio/NOV25-BDE-JOBMARKET.git
-cd NOV25-BDE-JOBMARKET
+git clone https://github.com/GaelleRoger/jobmarket-moteur-recommandations.git
+cd jobmarket-moteur-recommandations
 
 # 2. Première installation (build des conteneurs + initialisation)
 ./install.sh
@@ -42,10 +42,9 @@ L'interface Streamlit est accessible sur `http://localhost:8501` et l'API sur `h
 
 ## 🔧 Fonctionnalités
 
-- **Exploration des offres d'emploi** — recherche multi-critères (poste, localisation, secteur) agrégée depuis plusieurs sources
-- **Matching sémantique** — similarité cosinus entre un profil/CV et les offres via `sentence-transformers`
-- **Visualisations interactives** — cartes, histogrammes et indicateurs de tension du marché avec Plotly
-- **Pipeline ELT orchestré** — extraction automatisée via Airflow, stockage MongoDB + Elasticsearch
+- **Recherche sémantique offres d'emploi** — recherche multi-critères (poste, localisation, secteur) agrégée depuis plusieurs sources. Similarité cosinus entre une requête et les offres via `sentence-transformers`
+- **Visualisations interactives** — cartes, histogrammes et indicateurs de tension du marché du travail avec Plotly
+- **Pipeline ELT orchestré** — extraction automatisée des données d'offres via Airflow, stockage MongoDB + indexation Elasticsearch
 - **Données contextuelles INSEE** — population, équipements, communes pour enrichir les analyses géographiques
 
 ---
@@ -107,24 +106,16 @@ NOV25-BDE-JOBMARKET/
 ![scikit-learn](https://img.shields.io/badge/-Scikit--learn-F7931E?style=flat&logo=scikit-learn&logoColor=white)
 ![spaCy](https://img.shields.io/badge/-spaCy-09A3D5?style=flat&logo=spacy&logoColor=white)
 
----
-
-## 🚀 Prochaines Étapes
-
-- [ ] Déploiement de l'application (Streamlit Cloud / VPS)
-- [ ] Exposition d'une **API REST publique** documentée (Swagger)
-- [ ] Ajout d'un tableau de bord **Kibana** pour le monitoring des données
-- [ ] Enrichissement du matching avec un **modèle de recommandation** supervisé
 
 ---
 
 ## 👤 Contact
 
-**Projet réalisé en équipe** dans le cadre du Bootcamp Data Engineering — [DataScientest](https://datascientest.com/) (promotion NOV25).
+**Projet réalisé en équipe** dans le cadre du Bootcamp Data Engineering — [DataScientest](https://datascientest.com/).
 
-**Développé par :** Gaelle Roger
+**Contact** Gaëlle Roger
 
-- 💼 **Recruteurs :** Disponible pour de nouvelles opportunités — [LinkedIn]([TON-LINKEDIN])
+- 💼 **Recruteurs :** Disponible pour de nouvelles opportunités — [LinkedIn](https://www.linkedin.com/in/gaelle-roger/)
 - 🤝 **Contributeurs :** Issues et Pull Requests bienvenues !
 
 ---
